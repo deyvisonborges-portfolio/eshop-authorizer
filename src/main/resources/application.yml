@@ -2,7 +2,7 @@ server:
   port: 9000
 
 spring:
-  cloud:
-    config:
-      import-check:
-        enabled: false
+  application:
+    name: authorizer
+  config:
+    import: configserver:http://localhost:8080
